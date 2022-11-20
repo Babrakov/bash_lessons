@@ -2,15 +2,15 @@
 
 while [[ true ]]
 do
- read arg1 arg2 arg3
+ read arg1 op arg2
 
  if [[ $arg1 == "exit" ]]; then
   echo "bye"
   exit
  fi
 
- if [[ ! -z "$arg3" && "$arg3" != " " && ( "$arg2" == "+" || "$arg2" == "-" || "$arg2" == "*" || "$arg2" == "/" || "$arg2" == "%" || "$arg2" == "**" ) ]]; then
-  res=$(( $arg1 $arg2 $arg3 ))
+ if [[ ! -z "$arg2" && "$arg2" != " " && ( "$op" == "+" || "$op" == "-" || "$op" == "*" || "$op" == "/" || "$op" == "%" || "$op" == "**" ) ]]; then
+  res=$(( $arg1 $op $arg2 ))
   echo $res
  else
   echo "error"
