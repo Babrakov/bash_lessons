@@ -1,0 +1,1 @@
+Скрипты на bash для https://stepik.org/course/73/syllabus
